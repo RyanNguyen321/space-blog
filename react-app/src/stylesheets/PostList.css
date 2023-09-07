@@ -1,0 +1,32 @@
+.post-list-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.post{
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    height: 33vh;
+    width: 33vh;
+    position: relative;
+}
+
+.content{
+    color: black;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: clip;
+    font-size: 200%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.username{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    color: black;
+}

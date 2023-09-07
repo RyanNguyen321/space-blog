@@ -1,0 +1,40 @@
+.home-container{
+    color: #18122B;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.large-text{
+    font-size: 150px;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+}
+
+.small-text{
+    font-size: 25px;
+    overflow: hidden;
+    width: 700px;
+    margin: 50px;
+}
+
+.tab-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.tab{
+    font-size: 50px;
+    margin: auto;
+    border: 1px solid #18122B;
+    border-radius: 50px;
+    width: 200px;
+    text-align: center;
+}

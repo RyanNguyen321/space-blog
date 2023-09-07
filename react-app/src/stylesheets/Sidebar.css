@@ -1,0 +1,27 @@
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #18122B;
+    border-bottom: 1px solid #18122B;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.sidebar-logo-text{
+    font-size: 50px;
+    align-self: center;
+    translate: 0px 25px;
+}
+
+.sidebar-tab-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.sidebar-tab-text{
+    font-size: 25px;
+    margin-right: 25px;
+}
+

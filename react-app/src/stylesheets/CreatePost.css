@@ -1,0 +1,91 @@
+.createpost-container{
+    display: block;
+    font-size: 15px;
+    width: 100%;
+}
+
+.input-container{
+    display: block;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.content-input{
+    background: black;
+    user-select: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 0px 0px 0px;
+    border: none;
+}
+
+
+.content-input::placeholder{
+    font-size: 20px;
+}
+
+.content-input:focus{
+    outline: none;
+}
+
+.post-preview{
+    background: white;
+    padding: 10px;
+    margin: 50px 10px 10px 10px;
+    height: 33vh;
+    width: 33vh;
+    position: relative;
+}
+
+.content{
+    color: black;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: clip;
+    font-size: 200%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.username{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: black;
+}
+
+
+.submit-button{
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    background: rgb(61,0,142);
+    background: linear-gradient(0deg, rgba(61,0,142,1) 50%, rgba(113,0,153,1) 100%);
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    margin-top: 25px;
+    border-color:transparent;
+    width: 100%;
+}
+
+fieldset{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    border: none;
+}
+
+input[type='radio'] {
+    box-sizing: border-box;
+    appearance: none;
+    background: red;
+    outline: 2px solid #333;
+    border: 3px solid white;
+    width: 50px;
+    height: 50px;
+}
+
+input[type='radio']:checked {
+    border: 7px solid white;
+}
