@@ -14,14 +14,14 @@ router.route('/add').post((req, res) => {
     const username = req.body.username;
     const content = req.body.content;
     const date = Date.parse(req.body.date);
-    const color = req.body.color;
+    const title = req.body.title;
     const tags = req.body.tags;
 
     const newPost = new Post({
         username,
         content,
         date,
-        color,
+        title,
         tags
     });
 
@@ -30,7 +30,7 @@ router.route('/add').post((req, res) => {
         .catch(err => res.status(400).json('Error ' + err));
 });
 
-router.route('/id').get((req, res) => {
+router.route('/:id').get((req, res) => {
     Post.findById(req.params.id)
         .then(post => res.json(post))
         .catch(err => res.status(400).json('Error: ' + err));
@@ -48,7 +48,7 @@ router.route('/update/:id').post((req, res) => {
             post.username = req.body.username;
             post.content = req.body.content;
             post.date = Date.parse(req.body.date);
-            post.color = req.body.color;
+            post.title = req.body.title;
             post.tags = req.body.tags;
 
             post.save()
@@ -59,7 +59,6 @@ router.route('/update/:id').post((req, res) => {
 });
 
 router.route('/update').post((req,res) => {
-
 })
 
 module.exports = router;

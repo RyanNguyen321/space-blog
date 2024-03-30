@@ -11,7 +11,7 @@ export default class CreatePosts extends Component {
         this.onChangeUsername = this.onChangeUsername.bind(this);
         this.onChangeContent = this.onChangeContent.bind(this);
         this.onChangeDate = this.onChangeDate.bind(this);
-        this.onChangeColor = this.onChangeColor.bind(this);
+        this.onChangeTitle = this.onChangeTitle.bind(this);
         this.onChangeTags = this.onChangeTags.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
@@ -19,7 +19,7 @@ export default class CreatePosts extends Component {
             username: "",
             content: "",
             date: new Date(),
-            color: "red",
+            title: "",
             users: [],
             tags: []
         }
@@ -56,51 +56,12 @@ export default class CreatePosts extends Component {
         });
     }
 
-    onChangeColor(e) {
+    onChangeTitle(e)
+    {
         this.setState({
-            color: e.target.value
+            title: e.target.value
         });
     }
-
-    changePreviewColor(e)
-    {
-        let el = document.getElementById("post-preview");
-        el.style.background = e.target.value;
-        // let red = parseInt(e.target.value.substring(1,3), 16);
-        // let blue = parseInt(e.target.value.substring(3,5), 16);
-        // let green = parseInt(e.target.value.substring(5,7), 16);
-        // let rgba  = ("rgba(" + red + "," + blue + "," + green + ",1)");
-        //
-        // let newRed = red;
-        // let newBlue = blue;
-        // let newGreen = green;
-        //
-        // if (red < 30) {
-        //     newRed = 0;
-        // }
-        // else {
-        //     newRed = red - 30;
-        // }
-        //
-        // if (blue < 30) {
-        //     newBlue = 0;
-        // }
-        // else {
-        //     newBlue = blue - 30;
-        // }
-        //
-        // if (green < 30) {
-        //     newGreen = 0;
-        // }
-        // else {
-        //     newGreen = green - 30;
-        // }
-        //
-        // let newRgba  = "rgba(" + newRed + "," + newBlue + "," + newGreen + ",1)"
-
-
-    }
-
     onChangeTags(e) {
         this.setState({
             tags: e.target.value
@@ -113,7 +74,8 @@ export default class CreatePosts extends Component {
             username: this.state.username,
             content: this.state.content,
             date: this.state.date,
-            color: this.state.color,
+            title: this.state.title,
+            tags: this.state.tags
         }
 
         console.log(post);
@@ -142,7 +104,7 @@ export default class CreatePosts extends Component {
                             </div>
                             <div className='input-container'>
                                 <div>
-                                    Quote
+                                    Content
                                 </div>
                                 <input  type="text"
                                         required
@@ -153,25 +115,16 @@ export default class CreatePosts extends Component {
                                 />
                             </div>
                             <div className='input-container'>
-                                Select a Color
-                                <fieldset onChange={this.onChangeColor} >
-                                    <input onClick={this.changePreviewColor} type="radio" name="color" value="#FFD966" style={{background: "#FFD966"}} required/>
-                                    <input onClick={this.changePreviewColor} type="radio" name="color" value="#7286D3" style={{background: "#7286D3"}}/>
-                                    <input onClick={this.changePreviewColor} type="radio" name="color" value="#FD8A8A" style={{background: "#FD8A8A"}}/>
-                                    <input onClick={this.changePreviewColor} type="radio" name="color" value="#829460" style={{background: "#829460"}}/>
-                                    <input onClick={this.changePreviewColor} type="radio" name="color" value="#116A7B" style={{background: "#116A7B"}}/>
-                                </fieldset>
-                            </div>
-
-
-                            {/*Post preview*/}
-                            <div className='post-preview' id="post-preview">
-                                <div className='content'>
-                                    {this.state.content}
+                                <div>
+                                    Title
                                 </div>
-                                <div className='username'>
-                                    "{this.state.username}"
-                                </div>
+                                <input  type="text"
+                                        required
+                                        className="content-input"
+                                        placeholder='Title'
+                                        value={this.state.title}
+                                        onChange={this.onChangeTitle}
+                                />
                             </div>
                             <input type="submit" value="Bark" className="submit-button" />
                         </form>

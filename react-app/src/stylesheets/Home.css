@@ -16,13 +16,15 @@
     white-space: nowrap;
     overflow: visible;
     text-overflow: ellipsis;
+    line-height: 150px;
 }
 
 .small-text{
     font-size: 25px;
     overflow: hidden;
     width: 700px;
-    margin: 50px;
+    margin: 0px 0px 0px 50px;
+
 }
 
 .tab-container{

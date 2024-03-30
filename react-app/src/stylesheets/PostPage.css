@@ -1,0 +1,22 @@
+.post-page-container{
+    margin-right: 25px;
+    margin-left: 25px;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    justify-items: center;
+    font-size: 20px;
+}
+
+.post-body{
+
+}
+
+.post-header{
+
+}
+
+.post-title{
+    font-size: 45px;
+}

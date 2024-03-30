@@ -23,7 +23,7 @@ export default function Home() {
                     design
                 </div>
                 <div className='tab'>
-                    layoutttt
+                    layout
                 </div>
             </div>
         </div>
